@@ -1,0 +1,8 @@
+@font-face {
+  font-family: titleFont;
+  src: url(../fonts/Draconis.otf);
+}
+
+h1 {
+    font-family: titleFont;
+}
