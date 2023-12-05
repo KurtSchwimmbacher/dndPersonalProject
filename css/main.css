@@ -5,10 +5,11 @@
 
 body{
   background-color: #0E1116;
+  color: #EADEDA;
 }
 
 
-h1 {
+h1,h2 {
     font-family: titleFont;
 }
 
@@ -25,6 +26,7 @@ h1 {
 .nav-link:hover , .navbar-brand:hover, .active:hover{
   color: #EADEDA !important;
   border-bottom: 2px solid #EADEDA;
+  cursor: pointer;
 }
 
 .navbar-brand{
@@ -77,6 +79,7 @@ h1 {
 .btn-primary:hover{
   background-color: #374A67;
   border: 2px solid #EADEDA;
+  cursor: pointer;
 }
 
 .btn-primary:active{
@@ -143,4 +146,13 @@ h1 {
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+/* ======================================================================================================================= */
+
+/* Character Index page */
+
+.make-a-character{
+  display: flex;
+  justify-content: center;
 }
