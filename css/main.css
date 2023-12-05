@@ -3,6 +3,57 @@
   src: url(../fonts/Draconis.otf);
 }
 
+body{
+  background-color: #0E1116;
+}
+
+
 h1 {
     font-family: titleFont;
+}
+
+.navbar{
+  background-color: #374A67;
+}
+
+.nav-link , .navbar-brand{
+  color: #EADEDA;
+  font-family: titleFont;
+}
+
+.nav-link:hover , .navbar-brand:hover, .active:hover{
+  color: #0E1116 !important;
+  border-bottom: 2px solid #0E1116;
+}
+
+.navbar-brand{
+  width: 0px;
+}
+
+.navbar-nav{
+  margin-left: 10%;
+}
+
+.nav-link{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.active{
+  color: #EADEDA !important;
+  border-bottom: 2px solid #EADEDA;
+}
+
+.logo-img{
+  width: 32px;
+}
+
+.navbar-collapse{
+  justify-content: center;
+}
+
+.d-flex, .search-bar, .search-bar:focus{
+  font-family: titleFont;
+  color: #EADEDA !important;
+  background-color: #374A67;
 }
