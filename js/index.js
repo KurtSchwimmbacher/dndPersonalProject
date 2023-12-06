@@ -2,8 +2,8 @@ $(document).ready(function (){
     console.log("Hello World")
 
 
-    $(".btn-primary").on('click',function(){
-        console.log("hi")
+    $(".view-character-btn").on('click',function(){
+        window.location.href = `characterSheet.html`;
     });
 
 });
