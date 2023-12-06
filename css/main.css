@@ -157,6 +157,11 @@ h1,h2 {
   justify-content: center;
 }
 
+.make-a-character:hover{
+  cursor: pointer;
+  color: #374A67;
+}
+
 .table-dark{
   --bs-table-bg: #0E1116;
   --bs-table-color: #EADEDA;
