@@ -156,3 +156,36 @@ h1,h2 {
   display: flex;
   justify-content: center;
 }
+
+.table-dark{
+  --bs-table-bg: #0E1116;
+  --bs-table-color: #EADEDA;
+  --bs-table-border-color: #EADEDA; 
+  --bs-table-hover-bg: #0E1116;
+  --bs-table-hover-color: #EADEDA;
+}
+
+table{
+  font-family: titleFont;
+  font-size: 32px;
+}
+
+.view-character-btn{
+  text-align: end;
+}
+
+.view-character-btn:hover{
+  cursor: pointer;
+  color: #374A67;
+}
+
+.table-icon{
+  width: 88px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.icon-con{
+  vertical-align: middle;
+  text-align: center;
+}
