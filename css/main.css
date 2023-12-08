@@ -253,3 +253,11 @@ table{
   color: #374A67;
   cursor: pointer;
 }
+
+
+/* modal content */
+
+.modal-content{
+  background-color: #374A67;
+  color: #EADEDA;
+}
