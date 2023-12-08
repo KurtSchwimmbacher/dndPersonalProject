@@ -194,3 +194,61 @@ table{
   vertical-align: middle;
   text-align: center;
 }
+
+/* Character builder code */
+.choose-race{
+  text-align: center;
+}
+
+.builder-img{
+  width: 100%;
+  height: 120vh;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: 25% 25%;
+}
+
+.side-nav{
+  list-style: none;
+  margin-left: -60%;
+}
+
+.race-selector{
+  width: 60px;
+  height: 60px;
+  border: 3px solid #EADEDA;
+  border-radius: 100%;
+}
+
+.race-selector:hover{
+  background-color: #374A67;
+  border: 3px solid #374A67;
+  cursor: pointer;
+}
+
+.race-img{
+  width: 60px;
+  margin-left: -2px;
+  padding: 15px;
+}
+
+.fist-img{
+  width: 60px;
+  margin-left: -2px;
+  padding: 15px;
+  margin-top: -4px;
+}
+
+.race-name, .read-more-race{
+  font-size: 32px;
+}
+
+.read-more-race{
+  display: flex;
+  justify-content: end;
+}
+
+.read-more-race:hover{
+  color: #374A67;
+  cursor: pointer;
+}

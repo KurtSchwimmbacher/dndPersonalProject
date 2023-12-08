@@ -52,38 +52,70 @@
     <!-- ================================================================================================================= -->
 
     <div class="container">
-        <div class="row mt-5 mb-5">
-            <div class="col-12">
-                <h1> Your Characters</h1>
+        <!-- character name -->
+        <div class="row">
+            <div class="col-12 mt-5" >
+                <h1>Character Name</h1>
             </div>
-        </div>
 
-        <div class="row mb-5">
-            <div class="col-12 mb-5">
-                <table class="table table-dark table-hover">
-                    <h2 class="make-a-character" id="makeCharacter">Make A New Character</h2>
-
-                      <tbody>
-                        <tr class="mt-2">
-                          <th scope="row" class="icon-con">
-                            <img class="table-icon" src="../assets/icons/Sorcerer Icon.svg" >
-                          </th>
-                          <td class="character-details">Character Name <br>Class <br> Race</td>
-                          <td class="view-character-btn" >View Character</td>
-                        </tr>
-                    
-                        <tr class="mt-2">
-                            <th scope="row" align="center">icon</th>
-                            <td class="character-details">Character Name <br>Class <br> Race</td>
-                            <td class="view-character-btn" >View Character</td>
-                          </tr>
-
-                      </tbody>
-                </table>
+            <!-- choose a race and image -->
+            <div class="row mt-5">
+                <!-- space for side nav -->
+                <div class="col-1"></div>
+                <!-- choose a race title -->
+                <div class="col-6">
+                    <h1 class="choose-race">Choose a Race</h1>
+                </div>
+                <!-- image -->
+                <div class="col-5">
+                    <img class="builder-img" src="../assets/images/paladin class.jpg">
+                </div>
             </div>
-        </div>
-        
 
+            <!-- side nav and selectors -->
+            <div class="row" style="margin-top: -100vh;">
+                <!-- side nav -->
+                <div class="col-1" >
+                    <ul class="side-nav">
+                        <li class="race-selector">
+                            <img src="../assets/icons/Dragon icon.svg" class="race-img">
+                        </li>
+                        <li class="race-selector mt-5">
+                            <img src="../assets/icons/Sorcerer Icon.svg" class="race-img">
+                        </li>
+                        <li class="race-selector mt-5">
+                            <img src="../assets/icons/Fist Icon.svg" class="fist-img">
+                        </li>
+                        <li class="race-selector mt-5">
+                            <img src="../assets/icons/Scroll Icon.svg" class="race-img">
+                        </li>
+                        <li class="race-selector mt-5">
+                            <img src="../assets/icons/Sword Icon.svg" class="race-img">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- selectors -->
+                <div class="col-6">
+                    <table class="table table-dark table-hover">
+                        <h2 class="make-a-character" id="makeRace">Make A Custom Race</h2>
+                          <tbody id="raceCon">
+                            <tr class="mt-2">
+                              <td scope="row" class="race-name">Race Name</td>
+                              <td class="read-more-race" >Read More</td>
+                            </tr>
+    
+                          </tbody>
+                    </table>
+                </div>
+
+                <!-- space for image -->
+                <div class="col-5">
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!-- Footer -->
