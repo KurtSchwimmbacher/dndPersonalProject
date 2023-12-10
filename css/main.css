@@ -9,7 +9,7 @@ body{
 }
 
 
-h1,h2 {
+h1,h2,h3,h4,h5 {
     font-family: titleFont;
 }
 
@@ -211,7 +211,7 @@ table{
 
 .side-nav{
   list-style: none;
-  margin-left: -60%;
+  margin-left: -65%;
 }
 
 .race-selector{
@@ -219,6 +219,7 @@ table{
   height: 60px;
   border: 3px solid #EADEDA;
   border-radius: 100%;
+  margin-top: 2px;
 }
 
 .race-selector:hover{
@@ -254,6 +255,36 @@ table{
   cursor: pointer;
 }
 
+/* selector hover states */
+.selector-con{
+  width: 100%; 
+  height: auto; 
+  position: relative;
+}
+
+.selector-img-con{
+  position: absolute;
+}
+
+.active-selector{
+  width: 230px; 
+  height: 60px; 
+  border-radius: 60px; 
+  margin-left: -2px; 
+  margin-top: -2px;
+  background-color: #374A67;
+  border: 3px solid #EADEDA;
+}
+
+.selector-label{
+  width: 80%;
+  height: 80%;
+  margin-left: 20%;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* modal content */
 

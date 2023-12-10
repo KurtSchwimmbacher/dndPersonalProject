@@ -10,6 +10,21 @@ $(document).ready(function (){
         window.location.href = `characterBuilder.html`;
     });
 
+    // hide active states for side nav
+    $("#raceActiveSelect").hide();
+    // show side nav active state on hover
+    $("#raceSelector").on('mouseenter',function(){
+        $("#raceActiveSelect").show();
+        $("#slctImgCon").css("margin-top","2px")
+    });
+    // hide side nav active state when not hovering
+    $("#raceSelector").on('mouseleave',function(){
+        $("#raceActiveSelect").hide();
+        $("#slctImgCon").css("margin-top","0px")
+    });
+
+
+    // populate build a character page
     getClass();
 
 });
@@ -43,7 +58,7 @@ function loadClassesIntoCharacterBuilder(racesArr){
         const listItem= $(`
         <tr class="mt-5 mb-5">
             <td scope="row" class="race-name" >${race.name}</td>
-            <td class="read-more-race" data-bs-toggle="modal" data-bs-target="#exampleModal">Read More</td>
+            <td class="read-more-race" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom:-2px">Read More</td>
         </tr>
         `);
 
