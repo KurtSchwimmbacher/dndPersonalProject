@@ -88,6 +88,11 @@ h1,h2,h3,h4,h5 {
   border: 2px solid #374A67 !important;  
 }
 
+/* end of Universal Styles */
+/* ====================================================================================================================== */
+
+/* Home page styling */
+/* ====================================================================================================================== */
 
 .img-1-header{
   width: 100%;
@@ -148,10 +153,11 @@ h1,h2,h3,h4,h5 {
   background-repeat: no-repeat;
 }
 
+/* end of Home page styling */
 /* ======================================================================================================================= */
 
 /* Character Index page */
-
+/* ======================================================================================================================= */
 .make-a-character{
   display: flex;
   justify-content: center;
@@ -194,101 +200,8 @@ table{
   vertical-align: middle;
   text-align: center;
 }
-
-/* Character builder code */
-.choose-race{
-  text-align: center;
-}
+/* end of character index page */
+/* ======================================================================================================================= */
 
 
-.img-builder{
-  height: 120vh;
-  border-radius: 25px;
-  background-image: url(../assets/images/paladin\ class.jpg);
-  background-size: cover;
-  background-position: top;
-}
 
-.side-nav{
-  list-style: none;
-  margin-left: -65%;
-}
-
-.race-selector{
-  width: 60px;
-  height: 60px;
-  border: 3px solid #EADEDA;
-  border-radius: 100%;
-  margin-top: 2px;
-}
-
-.race-selector:hover{
-  background-color: #374A67;
-  border: 3px solid #374A67;
-  cursor: pointer;
-}
-
-.race-img{
-  width: 60px;
-  margin-left: -2px;
-  padding: 15px;
-}
-
-.fist-img{
-  width: 60px;
-  margin-left: -2px;
-  padding: 15px;
-  margin-top: -4px;
-}
-
-.race-name, .read-more-race{
-  font-size: 32px;
-}
-
-.read-more-race{
-  display: flex;
-  justify-content: end;
-}
-
-.read-more-race:hover{
-  color: #374A67;
-  cursor: pointer;
-}
-
-/* selector hover states */
-.selector-con{
-  width: 100%; 
-  height: auto; 
-  position: relative;
-}
-
-.selector-img-con{
-  position: absolute;
-}
-
-.active-selector{
-  width: 230px; 
-  height: 60px; 
-  border-radius: 60px; 
-  margin-left: -2px; 
-  margin-top: -2px;
-  background-color: #374A67;
-  border: 3px solid #EADEDA;
-}
-
-.selector-label{
-  width: 80%;
-  height: 80%;
-  margin-left: 20%;
-  padding-top: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* modal content */
-
-.modal-content{
-  background-color: #374A67;
-  color: #EADEDA;
-}

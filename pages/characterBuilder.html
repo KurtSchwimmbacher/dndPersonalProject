@@ -6,7 +6,7 @@
     <title>DND Website</title>
     <!-- CSS Links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/charBuilder.css" rel="stylesheet">
     
     <!-- bookmania font link -->
     <link rel="stylesheet" href="https://use.typekit.net/etc2jkw.css">
@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
   </head>
+
   <body>
     <!-- ================================================================================================================= -->
     <!-- Navigation -->
@@ -47,10 +48,13 @@
         </form>
       </div>
     </nav>
-
     <!-- Navigation End -->
     <!-- ================================================================================================================= -->
 
+
+    
+    <!-- ================================================================================================================= -->
+    <!-- Race Selecter Code -->
     <div class="container">
       <!-- character name -->
       <div class="row">
@@ -78,7 +82,7 @@
           <!-- side nav -->
           <div class="col-1" >
             <ul class="side-nav">
-              <li class="race-selector" id="raceSelector">
+              <li class="race-selector rs-active" id="raceSelector">
                 <div class="selector-con">
 
                   <div class="selector-img-con" id="raceImgCon">
@@ -165,39 +169,44 @@
       </div>
     </div>
 
-
-  
-    <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="raceInfo">Race Info</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="modalBody">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+    <!-- Race selector Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="raceInfo">Race Info</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- End of Race Selector Code -->
+    <!-- ================================================================================================================= -->
 
-  <!-- Footer -->
-  <!-- ================================================================================================================= -->
-  <footer>
-    <nav class="navbar mt-5 sticky-bottom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Dice
-          <img class="logo-img" src="../assets/Logo Pale Blue Minimal.svg">
-          Dragons
-        </a>
-      </div>
-    </nav>
-  </footer>
+
+
+
+    <!-- Footer -->
+    <!-- ================================================================================================================= -->
+    <footer>
+      <nav class="navbar mt-5 sticky-bottom">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Dice
+            <img class="logo-img" src="../assets/Logo Pale Blue Minimal.svg">
+            Dragons
+          </a>
+        </div>
+      </nav>
+    </footer>
+    <!-- End of Footer -->
+    <!-- ================================================================================================================= -->
 
   </body>
 </html>
