@@ -15,14 +15,26 @@ $(document).ready(function (){
     // show side nav active state on hover
     $("#raceSelector").on('mouseenter',function(){
         $("#raceActiveSelect").show();
-        $("#slctImgCon").css("margin-top","2px")
+        $("#raceImgCon").css("margin-top","2px")
     });
     // hide side nav active state when not hovering
     $("#raceSelector").on('mouseleave',function(){
         $("#raceActiveSelect").hide();
-        $("#slctImgCon").css("margin-top","0px")
+        $("#raceImgCon").css("margin-top","0px")
     });
 
+    // hide active states for side nav
+    $("#classActiveSelect").hide();
+    // show side nav active state on hover
+    $("#classSelector").on('mouseenter',function(){
+        $("#classActiveSelect").show();
+        $("#classImgCon").css("margin-top","2px")
+    });
+    // hide side nav active state when not hovering
+    $("#classSelector").on('mouseleave',function(){
+        $("#classActiveSelect").hide();
+        $("#classImgCon").css("margin-top","0px")
+    });
 
     // populate build a character page
     getClass();
