@@ -69,11 +69,11 @@
               
           <!-- choose a race title -->
           <div class="col-6" style="padding-left: 11%; padding-right: 2%">
-            <h1 class="choose-race">Choose a Race</h1>
+            <h1 class="choose-race" id="charBuilderTitle">Choose a Race</h1>
           </div>
               
           <!-- image -->
-          <div class="col-5 img-builder">
+          <div class="col-5 img-builder" id="charBuildImg">
           </div>
         </div>
 
@@ -149,12 +149,24 @@
           </div>
 
           <!-- select a race -->
-          <div class="col-6" style="padding-left: 10%; padding-right: 2%;">
+          <div class="col-6" style="padding-left: 10%; padding-right: 2%;" id="chooseRaceTable">
             <table class="table table-dark table-hover">
                 <h2 class="make-a-character" id="makeRace">Make A Custom Race</h2>
                 <tbody id="raceCon">
                   <tr class="mt-2">
                     <td scope="row" class="race-name">Loading Races</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <!-- select a class -->
+          <div class="col-6" style="padding-left: 10%; padding-right: 2%;" id="chooseClassTable">
+            <table class="table table-dark table-hover">
+                <h2 class="make-a-character" id="makeClass">Make A Custom Race</h2>
+                <tbody id="classCon">
+                  <tr class="mt-2">
+                    <td scope="row" class="class-name">Loading Races</td>
                   </tr>
                 </tbody>
             </table>
@@ -177,7 +189,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" id="modalBody">
-            ...
+            Loading Race Features
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

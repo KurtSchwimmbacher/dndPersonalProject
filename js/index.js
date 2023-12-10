@@ -1,6 +1,60 @@
 $(document).ready(function (){
-    console.log("Hello World")
 
+    $("#chooseClassTable").hide();
+
+
+    // change between side nav 
+    // =======================================================================================================================
+
+    // on race button click
+    $("#raceSelector").on('click',function(){
+        let slct = $("#raceSelector");
+
+        $("#charBuildImg").css('opacity', '1');
+        $("#charBuildImg").css('background-image' , 'url(../assets/images/paladinClass.jpg)');
+        $("#charBuilderTitle").text("Choose a Race");
+
+        $("#chooseRaceTable").show();
+        $("#chooseClassTable").hide();
+
+        slct.parent().find(".rs-active").removeClass("rs-active");
+
+        slct.addClass("rs-active");
+    });
+
+    // on class button click
+    $("#classSelector").on('click',function(){
+        let slct = $("#classSelector");
+
+        $("#charBuildImg").css('opacity', '1');
+        $("#charBuildImg").css('background-image' , 'url(../assets/images/fighterClass.jpg)');
+        $("#charBuilderTitle").text("Choose a Class");
+        
+        $("#chooseClassTable").show();
+        $("#chooseRaceTable").hide();
+
+        slct.parent().find(".rs-active").removeClass("rs-active");
+
+        slct.addClass("rs-active");
+    });
+
+    // on abilities button click
+    $("#statsSelector").on('click',function(){
+        let slct = $("#statsSelector");
+
+        $("#charBuildImg").css('opacity', '0');
+        $("#charBuilderTitle").parent().addClass('no-img')
+        $("#charBuilderTitle").text("Choose your Abilities");
+        
+        $("#chooseClassTable").show();
+        $("#chooseRaceTable").hide();
+
+        slct.parent().find(".rs-active").removeClass("rs-active");
+
+        slct.addClass("rs-active");
+    });
+
+    // =======================================================================================================================
 
     $(".view-character-btn").on('click',function(){
         window.location.href = `characterSheet.html`;
@@ -10,6 +64,7 @@ $(document).ready(function (){
         window.location.href = `characterBuilder.html`;
     });
 
+    // =======================================================================================================================
     // hide active states for side nav
     $("#raceActiveSelect").hide();
     // show side nav active state on hover
@@ -82,7 +137,7 @@ $(document).ready(function (){
         $("#equipActiveSelect").hide();
         $("#equipImgCon").css("margin-top","0px")
     });
-
+    // =======================================================================================================================
 
 
 
@@ -129,7 +184,16 @@ function loadRacesIntoCharacterBuilder(racesArr){
         `);
 
         listItem.on('click','.read-more-race',function(){
-            fillRaceModal(race.name);
+            
+            $("#raceInfo").text("Race Info");
+            $("#modalBody").text("Loading Racial Features");
+
+            setTimeout(
+                function() {
+                    fillRaceModal(race.name);
+                },
+                500);
+            
         });
     
         $("#raceCon").append(listItem);
