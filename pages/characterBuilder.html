@@ -52,88 +52,122 @@
     <!-- ================================================================================================================= -->
 
     <div class="container">
-        <!-- character name -->
-        <div class="row">
-            <div class="col-12 mt-5" >
-                <h1>Character Name</h1>
-            </div>
-
-            <!-- choose a race and image -->
-            <div class="row mt-5">
-                <!-- space for side nav -->
-                <div class="col-1"></div>
-                <!-- choose a race title -->
-                <div class="col-6" style="padding-left: 11%; padding-right: 2%">
-                    <h1 class="choose-race">Choose a Race</h1>
-                </div>
-                <!-- image -->
-                <div class="col-5 img-builder">
-                </div>
-            </div>
-
-            <!-- side nav and selectors -->
-            <div class="row" style="margin-top: -105vh;" >
-                <!-- side nav -->
-                <div class="col-1" >
-                    <ul class="side-nav">
-                        <li class="race-selector" id="raceSelector">
-                          <div class="selector-con">
-                            <div class="selector-img-con" id="raceImgCon">
-                              <img src="../assets/icons/Dragon icon.svg" class="race-img" id="raceSelectImg">
-                            </div>
-                            <div class="active-selector" id="raceActiveSelect">
-                              <h4 class="selector-label">Choose a Race</h4>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="race-selector mt-5" id="classSelector">
-                          <div class="selector-con">
-                            <div class="selector-img-con" id="classImgCon">
-                              <img src="../assets/icons/Sorcerer Icon.svg" class="race-img" id="classSelectImg">
-                            </div>
-                            <div class="active-selector" id="classActiveSelect">
-                              <h4 class="selector-label">Choose a Class</h4>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="race-selector mt-5">
-                            <img src="../assets/icons/Fist Icon.svg" class="fist-img">
-                        </li>
-                        <li class="race-selector mt-5">
-                            <img src="../assets/icons/Scroll Icon.svg" class="race-img">
-                        </li>
-                        <li class="race-selector mt-5">
-                            <img src="../assets/icons/Sword Icon.svg" class="race-img">
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- selectors -->
-                <div class="col-6" style="padding-left: 11%; padding-right: 2%;">
-                    <table class="table table-dark table-hover">
-                        <h2 class="make-a-character" id="makeRace">Make A Custom Race</h2>
-                          <tbody id="raceCon">
-                            <tr class="mt-2">
-                              <td scope="row" class="race-name">Race Name</td>
-                              <td class="read-more-race">Read More</td>
-                            </tr>
-    
-                          </tbody>
-                    </table>
-                </div>
-
-                <!-- space for image -->
-                <div class="col-5">
-
-                </div>
-            </div>
-
+      <!-- character name -->
+      <div class="row">
+        <div class="col-12 mt-5" >
+          <h1>Character Name</h1>
         </div>
+
+        <!-- choose a race and image -->
+        <div class="row mt-5">
+          <!-- space for side nav -->
+          <div class="col-1"></div>
+              
+          <!-- choose a race title -->
+          <div class="col-6" style="padding-left: 11%; padding-right: 2%">
+            <h1 class="choose-race">Choose a Race</h1>
+          </div>
+              
+          <!-- image -->
+          <div class="col-5 img-builder">
+          </div>
+        </div>
+
+        <!-- side nav and selectors -->
+        <div class="row" style="margin-top: -105vh;" >
+          <!-- side nav -->
+          <div class="col-1" >
+            <ul class="side-nav">
+              <li class="race-selector" id="raceSelector">
+                <div class="selector-con">
+
+                  <div class="selector-img-con" id="raceImgCon">
+                    <img src="../assets/icons/Dragon icon.svg" class="race-img" id="raceSelectImg">
+                  </div>
+
+                  <div class="active-selector" id="raceActiveSelect">
+                    <h4 class="selector-label">Choose a Race</h4>
+                  </div>
+                </div>
+              </li>
+
+              <li class="race-selector mt-5" id="classSelector">
+                <div class="selector-con">
+
+                  <div class="selector-img-con" id="classImgCon">
+                    <img src="../assets/icons/Sorcerer Icon.svg" class="race-img" id="classSelectImg">
+                  </div>
+
+                  <div class="active-selector" id="classActiveSelect">
+                    <h4 class="selector-label">Choose a Class</h4>
+                  </div>
+                </div>
+
+              </li>
+              <li class="race-selector mt-5" id="statsSelector">
+                <div class="selector-con">
+
+                  <div class="selector-img-con" id="statsImgCon">
+                    <img src="../assets/icons/Fist Icon.svg" class="fist-img" id="statsSelectImg">
+                  </div>
+
+                  <div class="active-selector" id="statsActiveSelect">
+                    <h4 class="selector-label">Choose Abilities</h4>
+                  </div>
+                </div>
+              </li>
+
+              <li class="race-selector mt-5" id="descSelector">
+                <div class="selector-con">
+
+                  <div class="selector-img-con" id="descImgCon">
+                    <img src="../assets/icons/Scroll Icon.svg" class="race-img" id="descSelectImg">
+                  </div>
+
+                  <div class="active-selector" id="descActiveSelect">
+                    <h4 class="selector-label">Set a Description</h4>
+                  </div>
+                </div>
+              </li>
+
+              <li class="race-selector mt-5" id="equipSelector">
+                <div class="selector-con">
+                  <div class="selector-img-con" id="equipImgCon">
+                    <img src="../assets/icons/Sword Icon.svg" class="race-img" id="equipSelectImg">
+                  </div>
+
+                  <div class="active-selector" id="equipActiveSelect">
+                    <h4 class="selector-label">Choose Equipment</h4>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- select a race -->
+          <div class="col-6" style="padding-left: 10%; padding-right: 2%;">
+            <table class="table table-dark table-hover">
+                <h2 class="make-a-character" id="makeRace">Make A Custom Race</h2>
+                <tbody id="raceCon">
+                  <tr class="mt-2">
+                    <td scope="row" class="race-name">Race Name</td>
+                    <td class="read-more-race">Read More</td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <!-- space for image -->
+          <div class="col-5">
+
+          </div>
+        </div>
+      </div>
     </div>
 
 
   
-  <!-- Modal -->
+    <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -152,18 +186,18 @@
     </div>
   </div>
 
-    <!-- Footer -->
-    <!-- ================================================================================================================= -->
-    <footer>
-      <nav class="navbar mt-5 sticky-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Dice
-            <img class="logo-img" src="../assets/Logo Pale Blue Minimal.svg">
-            Dragons
-          </a>
-        </div>
-      </nav>
-    </footer>
+  <!-- Footer -->
+  <!-- ================================================================================================================= -->
+  <footer>
+    <nav class="navbar mt-5 sticky-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dice
+          <img class="logo-img" src="../assets/Logo Pale Blue Minimal.svg">
+          Dragons
+        </a>
+      </div>
+    </nav>
+  </footer>
 
   </body>
 </html>

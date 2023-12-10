@@ -23,6 +23,8 @@ $(document).ready(function (){
         $("#raceImgCon").css("margin-top","0px")
     });
 
+// ======================================================
+
     // hide active states for side nav
     $("#classActiveSelect").hide();
     // show side nav active state on hover
@@ -36,6 +38,50 @@ $(document).ready(function (){
         $("#classImgCon").css("margin-top","0px")
     });
 
+    // ======================================================
+
+    // hide active states for side nav
+    $("#statsActiveSelect").hide();
+    // show side nav active state on hover
+    $("#statsSelector").on('mouseenter',function(){
+        $("#statsActiveSelect").show();
+        $("#statsImgCon").css("margin-top","2px")
+    });
+    // hide side nav active state when not hovering
+    $("#statsSelector").on('mouseleave',function(){
+        $("#statsActiveSelect").hide();
+        $("#statsImgCon").css("margin-top","0px")
+    });
+
+    // ======================================================
+
+    // hide active states for side nav
+    $("#descActiveSelect").hide();
+    // show side nav active state on hover
+    $("#descSelector").on('mouseenter',function(){
+        $("#descActiveSelect").show();
+        $("#descImgCon").css("margin-top","2px")
+    });
+    // hide side nav active state when not hovering
+    $("#descSelector").on('mouseleave',function(){
+        $("#descActiveSelect").hide();
+        $("#descImgCon").css("margin-top","0px")
+    });
+
+    // ======================================================
+
+    // hide active states for side nav
+    $("#equipActiveSelect").hide();
+    // show side nav active state on hover
+    $("#equipSelector").on('mouseenter',function(){
+        $("#equipActiveSelect").show();
+        $("#equipImgCon").css("margin-top","2px")
+    });
+    // hide side nav active state when not hovering
+    $("#equipSelector").on('mouseleave',function(){
+        $("#equipActiveSelect").hide();
+        $("#equipImgCon").css("margin-top","0px")
+    });
     // populate build a character page
     getClass();
 
