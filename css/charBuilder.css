@@ -91,6 +91,28 @@
   }
 
 
+  .btn-secondary{
+    font-family: titleFont;
+    font-size: 24px;
+    color: #EADEDA;
+    background-color: #374A67;
+    border-radius: 15px;
+    border: 2px solid #374A67;
+    width: 35%;
+  }
+  
+  .btn-secondary:hover{
+    background-color: #374A67;
+    border: 2px solid #EADEDA;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:active{
+    color: #374A67 !important;
+    background-color: #EADEDA !important;
+    border: 2px solid #374A67 !important;  
+  }
+
   .table-dark{
     --bs-table-bg: #0E1116;
     --bs-table-color: #EADEDA;
