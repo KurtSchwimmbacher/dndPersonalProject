@@ -23,7 +23,7 @@ $(document).ready(function (){
         $("#raceImgCon").css("margin-top","0px")
     });
 
-// ======================================================
+    // ======================================================
 
     // hide active states for side nav
     $("#classActiveSelect").hide();
@@ -82,6 +82,14 @@ $(document).ready(function (){
         $("#equipActiveSelect").hide();
         $("#equipImgCon").css("margin-top","0px")
     });
+
+
+
+
+
+
+
+
     // populate build a character page
     getClass();
 
@@ -99,7 +107,7 @@ function getClass(){
         success: function(data){
         temp = data.results;
 
-        loadClassesIntoCharacterBuilder(temp);    
+        loadRacesIntoCharacterBuilder(temp);    
         
         },
         error: function(error){
@@ -108,7 +116,7 @@ function getClass(){
     })
 }
 
-function loadClassesIntoCharacterBuilder(racesArr){
+function loadRacesIntoCharacterBuilder(racesArr){
     console.log(racesArr)
     $("#raceCon").empty();
 

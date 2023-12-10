@@ -140,7 +140,7 @@
   }
   
   
-  .img-builder{
+.img-builder{
     height: 120vh;
     border-radius: 25px;
     background-image: url(../assets/images/paladin\ class.jpg);
@@ -148,6 +148,17 @@
     background-position: top;
   }
   
+
+  .make-a-character{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .make-a-character:hover{
+    cursor: pointer;
+    color: #374A67;
+  }
+
   .side-nav{
     list-style: none;
     margin-left: -65%;
