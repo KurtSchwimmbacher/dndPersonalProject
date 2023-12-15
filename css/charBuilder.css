@@ -292,6 +292,7 @@
 
 
   .ability-card-items th, .ability-card-items td{
+    font-weight: 100;
     font-size: 19px;
     background-color: #0E1116;
     color: #EADEDA;
