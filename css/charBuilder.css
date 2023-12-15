@@ -239,6 +239,20 @@
     justify-content: center;
     align-items: center;
   }
+
+  .no-img{
+    width: 100%;
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+    margin-left: 8%;
+  }
+  
+  .roll-method{
+    width: 40%;
+    background-color: #374A67;
+    color: #EADEDA;
+  }
+  
   
   /* modal content */
   
@@ -248,3 +262,19 @@
   }
   
   /* ======================================================================================================================= */
+
+
+
+  /* ability cards  */
+
+
+  .card-con{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ability-card{
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+  }

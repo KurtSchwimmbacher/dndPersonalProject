@@ -1,7 +1,7 @@
 $(document).ready(function (){
 
     $("#chooseClassTable").hide();
-
+    $("#chooseAbilitiesTable").hide();
 
     // change between side nav 
     // =======================================================================================================================
@@ -13,9 +13,13 @@ $(document).ready(function (){
         $("#charBuildImg").css('opacity', '1');
         $("#charBuildImg").css('background-image' , 'url(../assets/images/paladinClass.jpg)');
         $("#charBuilderTitle").text("Choose a Race");
+        $("#charBuilderTitle").parent().removeClass('no-img');
+
+        $("#selecterCon").css('margin-top','-105vh');
 
         $("#chooseRaceTable").show();
         $("#chooseClassTable").hide();
+        $("#chooseAbilitiesTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -29,9 +33,13 @@ $(document).ready(function (){
         $("#charBuildImg").css('opacity', '1');
         $("#charBuildImg").css('background-image' , 'url(../assets/images/fighterClass.jpg)');
         $("#charBuilderTitle").text("Choose a Class");
+        $("#charBuilderTitle").parent().removeClass('no-img')
+
+        $("#selecterCon").css('margin-top','-105vh');
         
         $("#chooseClassTable").show();
         $("#chooseRaceTable").hide();
+        $("#chooseAbilitiesTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -45,9 +53,12 @@ $(document).ready(function (){
         $("#charBuildImg").css('opacity', '0');
         $("#charBuilderTitle").parent().addClass('no-img')
         $("#charBuilderTitle").text("Choose your Abilities");
+
+        $("#selecterCon").css('margin-top','-115vh');
         
-        $("#chooseClassTable").show();
+        $("#chooseClassTable").hide();
         $("#chooseRaceTable").hide();
+        $("#chooseAbilitiesTable").show();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -146,13 +157,14 @@ $(document).ready(function (){
 
 
     // populate build a character page
-    getClass();
+    getRacesToBuilder();
+    getClassesToBuilder();
 
 });
 
 
-function getClass(){
-    let classToDisp = "";
+function getRacesToBuilder(){
+    let racesToDisp = "";
     $.ajax({
         dataType: 'json',
         type:"GET",
@@ -201,6 +213,55 @@ function loadRacesIntoCharacterBuilder(racesArr){
       });
 }
 
+
+function getClassesToBuilder(){
+    $.ajax({
+        dataType: 'json',
+        type:"GET",
+        // gets the first page of results
+        url:`https://www.dnd5eapi.co/api/classes/`,
+        
+        success: function(data){
+        temp = data.results;
+
+        loadClassesIntoCharacterBuilder(temp);    
+        
+        },
+        error: function(error){
+        // handle as it comes
+        }
+    })
+}
+
+function loadClassesIntoCharacterBuilder(classesArr){
+    console.log(classesArr)
+    $("#classCon").empty();
+
+    classesArr.forEach(classes => {
+        const listItem= $(`
+        <tr class="mt-5 mb-5">
+            <td scope="row" class="race-name" >${classes.name}</td>
+            <td class="read-more-race" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom:-2px">Read More</td>
+        </tr>
+        `);
+
+        listItem.on('click','.read-more-race',function(){
+            
+            $("#raceInfo").text("Race Info");
+            $("#modalBody").text("Loading Racial Features");
+
+            setTimeout(
+                function() {
+                    fillRaceModal(classes.name);
+                },
+                500);
+            
+        });
+    
+        $("#classCon").append(listItem);
+    
+      });
+}
 
 function fillRaceModal(race){
     let modalTitle = $("#raceInfo");
