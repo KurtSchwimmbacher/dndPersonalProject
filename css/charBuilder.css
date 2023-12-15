@@ -274,7 +274,29 @@
   }
 
   .ability-card{
+    height: auto;
+    width: 29%;
     margin: 2%;
     display: flex;
-    justify-content: center;
+    text-align: center;
+    background-color: #0E1116;
+    color: #EADEDA;
+    border: 2px solid #EADEDA;
+    
+  }
+
+  .card-header{
+    border-bottom: 2px solid #EADEDA;
+  }
+
+
+
+  .ability-card-items th, .ability-card-items td{
+    font-size: 19px;
+    background-color: #0E1116;
+    color: #EADEDA;
+  }
+
+  .ability-card-items{
+    margin-bottom: 0% !important;
   }
