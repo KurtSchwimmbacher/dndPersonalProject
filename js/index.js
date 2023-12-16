@@ -20,6 +20,7 @@ $(document).ready(function (){
         $("#chooseRaceTable").show();
         $("#chooseClassTable").hide();
         $("#chooseAbilitiesTable").hide();
+        $("#chooseDescTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -40,6 +41,7 @@ $(document).ready(function (){
         $("#chooseClassTable").show();
         $("#chooseRaceTable").hide();
         $("#chooseAbilitiesTable").hide();
+        $("#chooseDescTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -58,7 +60,29 @@ $(document).ready(function (){
         
         $("#chooseClassTable").hide();
         $("#chooseRaceTable").hide();
+        $("#chooseDescTable").hide();
         $("#chooseAbilitiesTable").show();
+
+        slct.parent().find(".rs-active").removeClass("rs-active");
+
+        slct.addClass("rs-active");
+    });
+
+     // on description button click
+     $("#descSelector").on('click',function(){
+        let slct = $("#descSelector");
+
+        $("#charBuildImg").css('opacity', '1');
+        $("#charBuildImg").css('background-image' , 'url(../assets/images/bardClass.jpg)');
+        $("#charBuilderTitle").parent().removeClass('no-img')
+        $("#charBuilderTitle").text("Choose a description");
+
+        $("#selecterCon").css('margin-top','-105vh');
+        
+        $("#chooseClassTable").hide();
+        $("#chooseRaceTable").hide();
+        $("#chooseAbilitiesTable").hide();
+        $("#chooseDescTable").show();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -151,14 +175,10 @@ $(document).ready(function (){
     // =======================================================================================================================
 
 
-
-
-
-
-
     // populate build a character page
     getRacesToBuilder();
     getClassesToBuilder();
+    getDescToBuilder();
 
 });
 
@@ -262,6 +282,43 @@ function loadClassesIntoCharacterBuilder(classesArr){
     
       });
 }
+
+
+function getDescToBuilder(){
+    $.ajax({
+        dataType: 'json',
+        type:"GET",
+        // gets the first page of results
+        url:`https://api.open5e.com/v1/backgrounds`,
+        
+        success: function(data){
+        temp = data.results;
+
+        loadDescIntoCharacterBuilder(temp);    
+        
+        },
+        error: function(error){
+        // handle as it comes
+        }
+    })
+}
+
+function loadDescIntoCharacterBuilder(descArr){
+    console.log(descArr)
+    $("#slctBG").empty();
+
+    descArr.forEach(desc => {
+        const selectBGItem = $(`
+            <option selected value="${desc.name}">${desc.name}</option>
+        `);
+
+        $("#slctBG").append(selectBGItem);
+    
+      });
+}
+
+
+
 
 function fillRaceModal(race){
     let modalTitle = $("#raceInfo");

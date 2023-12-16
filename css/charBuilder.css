@@ -251,6 +251,15 @@
     width: 40%;
     background-color: #374A67;
     color: #EADEDA;
+    font-family: titleFont;
+    font-size: 19px;
+  }
+
+  .bgSelect{
+    background-color: #374A67;
+    color: #EADEDA;
+    font-family: titleFont;
+    font-size: 19px;
   }
   
   
@@ -300,4 +309,15 @@
 
   .ability-card-items{
     margin-bottom: 0% !important;
+  }
+
+
+  .char-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desc-subtitle{
+    font-size: 14px;
   }
