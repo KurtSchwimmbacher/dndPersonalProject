@@ -2,6 +2,7 @@ $(document).ready(function (){
 
     $("#chooseClassTable").hide();
     $("#chooseAbilitiesTable").hide();
+    $("#chooseDescTable").hide();
 
     // change between side nav 
     // =======================================================================================================================
@@ -42,6 +43,7 @@ $(document).ready(function (){
         $("#chooseRaceTable").hide();
         $("#chooseAbilitiesTable").hide();
         $("#chooseDescTable").hide();
+        $("#chooseDescTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -62,6 +64,7 @@ $(document).ready(function (){
         $("#chooseRaceTable").hide();
         $("#chooseDescTable").hide();
         $("#chooseAbilitiesTable").show();
+        $("#chooseDescTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
