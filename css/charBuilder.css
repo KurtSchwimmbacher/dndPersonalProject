@@ -321,3 +321,15 @@
   .desc-subtitle{
     font-size: 14px;
   }
+
+  .char-details-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  input[type= "range"]::-webkit-slider-thumb{
+    background-color: #374A67 !important;
+    border: 1px solid #EADEDA;
+  }

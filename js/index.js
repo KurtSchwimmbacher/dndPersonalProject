@@ -3,6 +3,7 @@ $(document).ready(function (){
     $("#chooseClassTable").hide();
     $("#chooseAbilitiesTable").hide();
     $("#chooseDescTable").hide();
+    $("#charDetailsCon").hide()
 
     // change between side nav 
     // =======================================================================================================================
@@ -182,6 +183,22 @@ $(document).ready(function (){
     getRacesToBuilder();
     getClassesToBuilder();
     getDescToBuilder();
+
+
+    $("#AFL").on('click',function(){
+        $("#charDetailsCon").toggle()
+    });
+
+    $("#closeAFL").on('click',function(){
+        $("#charDetailsCon").hide()
+    });
+    
+    $("#lifestyleRange").on('input',function(){
+        let val = $("#lifestyleRange").val();
+        let cost = `Cost: ${val} GP`;
+        $("#lifestyleLabel").text(cost)
+    })
+
 
 });
 
