@@ -333,3 +333,19 @@
     background-color: #374A67 !important;
     border: 1px solid #EADEDA;
   }
+
+
+  .clseBtn:hover , .desc-subtitle:hover{
+    cursor: pointer;
+    color: #374A67;
+  }
+
+  .bg-desc{
+    font-size: 14px;
+    font-family: "bookmania", serif;
+  }
+
+  .feat{
+    font-size: 18px;
+    font-family: titleFont;
+  }

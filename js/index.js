@@ -4,6 +4,10 @@ $(document).ready(function (){
     $("#chooseAbilitiesTable").hide();
     $("#chooseDescTable").hide();
     $("#charDetailsCon").hide()
+    $("#physCharCon").hide();
+    $("#perCharCon").hide();
+    $("#charNotesCon").hide();
+    $("#chooseEquipTable").hide();
 
     // change between side nav 
     // =======================================================================================================================
@@ -23,6 +27,7 @@ $(document).ready(function (){
         $("#chooseClassTable").hide();
         $("#chooseAbilitiesTable").hide();
         $("#chooseDescTable").hide();
+        $("#chooseEquipTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -44,7 +49,7 @@ $(document).ready(function (){
         $("#chooseRaceTable").hide();
         $("#chooseAbilitiesTable").hide();
         $("#chooseDescTable").hide();
-        $("#chooseDescTable").hide();
+        $("#chooseEquipTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -65,7 +70,7 @@ $(document).ready(function (){
         $("#chooseRaceTable").hide();
         $("#chooseDescTable").hide();
         $("#chooseAbilitiesTable").show();
-        $("#chooseDescTable").hide();
+        $("#chooseEquipTable").hide();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -87,6 +92,30 @@ $(document).ready(function (){
         $("#chooseRaceTable").hide();
         $("#chooseAbilitiesTable").hide();
         $("#chooseDescTable").show();
+        $("#chooseEquipTable").hide();
+
+        slct.parent().find(".rs-active").removeClass("rs-active");
+
+        slct.addClass("rs-active");
+    });
+
+
+     // on equipment button click
+     $("#equipSelector").on('click',function(){
+        let slct = $("#equipSelector");
+
+        $("#charBuildImg").css('opacity', '1');
+        $("#charBuildImg").css('background-image' , 'url(../assets/images/rogueClass.jpg)');
+        $("#charBuilderTitle").text("Choose Equipment");
+        $("#charBuilderTitle").parent().removeClass('no-img')
+
+        $("#selecterCon").css('margin-top','-105vh');
+        
+        $("#chooseClassTable").hide();
+        $("#chooseRaceTable").hide();
+        $("#chooseAbilitiesTable").hide();
+        $("#chooseDescTable").hide();
+        $("#chooseEquipTable").show();
 
         slct.parent().find(".rs-active").removeClass("rs-active");
 
@@ -199,6 +228,36 @@ $(document).ready(function (){
         $("#lifestyleLabel").text(cost)
     })
 
+    
+    $("#physChar").on('click',function(){
+        $("#physCharCon").toggle()
+    });
+
+    $("#closePhysChar").on('click',function(){
+        $("#physCharCon").hide()
+    });
+
+    $("#perChar").on('click',function(){
+        $("#perCharCon").toggle()
+    });
+
+    $("#closePerChar").on('click',function(){
+        $("#perCharCon").hide()
+    });
+    
+    $("#charNotes").on('click',function(){
+        $("#charNotesCon").toggle()
+    });
+
+    $("#closeCharNotes").on('click',function(){
+        $("#charNotesCon").hide()
+    });
+   
+    
+    $("#slctBG").on('change',function(){
+        console.log($("#slctBG").val())
+        getBGDetails($("#slctBG").val());
+    });
 
 });
 
@@ -366,4 +425,40 @@ function fillRaceModal(race){
         }
     })
 
+}
+
+
+
+function getBGDetails(selectedBG){
+    selectedBG = selectedBG.toLowerCase();
+    let temp = selectedBG.split(" ");
+    selectedBG = temp[0];
+    for(let i = 1; i < temp.length; i++){
+        selectedBG += "-"+temp[i];  
+    }
+
+    let BGurl = `https://api.open5e.com/v1/backgrounds/${selectedBG}`;
+    console.log(BGurl)
+    $.ajax({
+        dataType: 'json',
+        type:"GET",
+        // gets the first page of results
+        url: BGurl,
+        
+        success: function(data){
+        temp = data;
+        console.log(temp)
+
+        $("#bgDesc").text(`Description: ${temp.desc}`);
+        $("#bgSkills").text(`Skills Proficiencies: ${temp.skill_proficiencies}`);
+        $("#bgTools").text(`Tool Proficiencies: ${temp.tool_proficiencies}`);
+        $("#bgLang").text(`Languages: ${temp.languages}`);
+        $("#bgEquip").text(`Equipment: ${temp.equipment}`);
+        $("#bgFeature").text(`${temp.feature}`);
+        $("#bgFeatureDesc").text(`${temp.feature_desc}`);   
+        },
+        error: function(error){
+        // handle as it comes
+        }
+    })
 }

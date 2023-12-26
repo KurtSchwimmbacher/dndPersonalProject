@@ -353,6 +353,27 @@
                   <option selected value="default">Default</option>
                 </select>
                 <tbody id="bgCon">
+                  <p id="bgDesc" class="bg-desc">
+                    In your youth, the defense of the city, the community, the caravan, or your patron was how you earned your coin. You might have been trained by an old, grizzled city watchman, or you might have been pressed into service by the local magistrate for your superior skills, size, or intellect. However you came to the role, you excelled at defending others.\n  You have a nose for trouble, a keen eye for spotting threats, a strong arm to back it up, and you are canny enough to know when to act. Most importantly, though, you were a peace officer or a protector and not a member of an army which might march to war.
+                  </p>
+                  <p id="bgSkills" class="bg-desc">
+                    Insight, Perception
+                  </p>
+                  <p id="bgTools" class="bg-desc">
+                    One type of gaming set
+                  </p>
+                  <p id="bgLang" class="bg-desc">
+                    One language of your choice
+                  </p>
+                  <p id="bgEquip" class="bg-desc">
+                    A set of dice or deck of cards, a shield bearing your previous employer's symbol, a set of common clothes, a hooded lantern, a signal whistle, and a belt pouch containing 10 gp
+                  </p>
+                  <p id="bgFeature" class="bg-desc feat">
+                    Comrades in Arms
+                  </p>
+                  <p id="bgFeatureDesc" class="bg-desc">
+                    Comrades in Arms
+                  </p>
                   <tr class="mt-2">
                     <td scope="row" class="char-details">
                       <h1>Character Details</h1>
@@ -373,32 +394,137 @@
 
                       <h4>Faith</h4>
                       <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
                       </div>
 
                         <h4>Lifestyle</h4>
                         <input type="range" class="form-range slider" id="lifestyleRange" min="1" max="10" style="width: 80%;"> 
                         <p style="font-size: 16px; align-self: flex-start; margin-left: 10%;" id="lifestyleLabel">Cost: x GP</p>
                       
-                        <h5 id="closeAFL">Close</h5>
+                        <h5 id="closeAFL" class="clseBtn">Close</h5>
 
                       </div>                      
                     </td>
 
                     <td scope="row" class="char-details">
                       <h1>Physical Characteristicss</h1>
-                      <p class="desc-subtitle mt-3">Hair - Skin - Eyes - Height - Weight - Age - Gender</p>
+                      <p class="desc-subtitle mt-3" id="physChar">Hair - Skin - Eyes - Height - Weight - Age - Gender</p>
+
+                      <div class="char-details-con" id="physCharCon">
+                        <h4>Hair</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Skin</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Eyes</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Height</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Weight</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Age</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+                        <h4>Gender</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h5 id="closePhysChar" class="clseBtn">Close</h5>
+
+                      </div>
+
                     </td>
 
                     <td scope="row" class="char-details">
                       <h1>Personal Characteristics</h1>
-                      <p class="desc-subtitle mt-3">Personality - Ideals - Bonds - Flaws</p>
+                      <p class="desc-subtitle mt-3" id="perChar">Personality - Ideals - Bonds - Flaws</p>
+
+                      <div class="char-details-con" id="perCharCon">
+                        <h4>Personality</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Ideals</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Bonds</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Flaws</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h5 id="closePerChar" class="clseBtn">Close</h5>
+
+                      </div>
+
                     </td>
 
                     <td scope="row" class="char-details">
                       <h1>Notes</h1>
-                      <p class="desc-subtitle mt-3">Organisations - Allies - Enemies - Backstory - Other</p>
+                      <p class="desc-subtitle mt-3" id="charNotes">Organisations - Allies - Enemies - Backstory - Other</p>
+
+                      <div class="char-details-con" id="charNotesCon">
+                        <h4>Organisations</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Allies</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Enemies</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Backstory</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h4>Other</h4>
+                        <div class="mb-3" id="charDetailsTxt" style="width: 80%;">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                        </div>
+
+                        <h5 id="closeCharNotes" class="clseBtn">Close</h5>
+
+                      </div>
+
                     </td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+
+
+          <!-- select equipment -->
+          <div class="col-6" style="padding-left: 10%; padding-right: 2%;" id="chooseEquipTable">
+            <table class="table table-dark table-hover">
+                <h2 class="make-a-character" id="makeClass">Make A Custom Equipment</h2>
+                <tbody id="classCon">
+                  <tr class="mt-2">
+                    <td scope="row" class="temp">temp</td>
                   </tr>
                 </tbody>
             </table>
