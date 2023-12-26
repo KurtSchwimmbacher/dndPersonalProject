@@ -6,7 +6,7 @@
     <title>DND Website</title>
     <!-- CSS Links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/charSheet.css" rel="stylesheet">
     
     <!-- bookmania font link -->
     <link rel="stylesheet" href="https://use.typekit.net/etc2jkw.css">
@@ -50,7 +50,103 @@
 
     <!-- Navigation End -->
     <!-- ================================================================================================================= -->
+    <div class="container mb-5 mt-2">
+      <h1>
+        Character Sheet
+      </h1>
+      <h2>
+        Character Name
+      </h2>
+      <h3>
+        Race/Class/Level
+      </h3>
 
+      <!-- first row -->
+      <div class="row">
+        <!-- stat blocks -->
+        <div class="col-2 stat-blocks">
+          <!-- first two stat blocks -->
+          <div class="stat-block sheet-panel mt-5">
+            STR
+          </div>
+          <div class="stat-block sheet-panel mt-5">
+            DEX
+          </div>
+        </div>
+        <!-- saving throws -->
+        <div class="col-4 saving-throws sheet-panel mt-5">
+          temp
+        </div>
+        <!-- proficiency / walking speed/ ac/ initiative -->
+        <div class="col-3 prof-walk-etc">
+          <!-- proficiency -->
+          <div class="prof sheet-panel mt-5" style="float: left;">
+            prof
+          </div>
+          <!-- walking speed -->
+          <div class="walk sheet-panel mt-5" style="float: right;">
+            walk
+          </div>
+          <!-- initiative -->
+          <div class="init sheet-panel mt-5" style="float: left; margin-top: 15vh !important;">
+            initiative
+          </div>
+          <!-- AC -->
+          <div class="ac sheet-panel mt-5" style="float: right; margin-top: 15vh !important">
+            AC
+          </div>
+        </div>
+        <!-- health / resistances -->
+        <div class="col-3 health-resist">
+          <h4 class="mt-3" style="float: left;">Long Rest</h4>
+          <h4 class="mt-3" style="float: right;">Short Rest</h4>
+          <div class="health sheet-panel mt-5">
+            Health
+          </div>
+          <div class="resist sheet-panel mt-5">
+            Resistances/Condition
+          </div>
+        </div>
+      </div>
+      <!-- second row -->
+      <div class="row">
+        <!-- stat blocks -->
+        <div class="col-2 stat-blocks">
+          <!-- second set of stat blocks -->
+          <div class="stat-block sheet-panel mt-5">
+            CON
+          </div>
+          <div class="stat-block sheet-panel mt-5">
+            INT
+          </div>
+          <div class="stat-block sheet-panel mt-5">
+            WIS
+          </div>
+          <div class="stat-block sheet-panel mt-5">
+            CHA
+          </div>
+        </div>
+        <!-- skills -->
+        <div class="col-3 skills sheet-panel mt-5" style="height: 30vh;">
+          Skills
+        </div>
+        <!-- actions -->
+        <div class="col-7 sheet-panel mt-5" style="margin-left: 2%; width: 56.33%; height: 60vh;">
+          Actions
+        </div>
+      </div>
+      <!-- third row -->
+      <div class="row"  style="margin-top: -20vh; margin-bottom: 20vh;">
+        <!-- proficiencies and languages -->
+        <div class="col-5 prof-lang sheet-panel mt-5">
+          temp
+        </div>
+        <!-- empty space for actions -->
+        <div class="col-7 actions-filler">
+
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <!-- ================================================================================================================= -->

@@ -1,0 +1,123 @@
+/* Universal Styles */
+
+@font-face {
+    font-family: titleFont;
+    src: url(../fonts/Draconis.otf);
+  }
+  
+  body{
+    background-color: #0E1116;
+    color: #EADEDA;
+  }
+  
+  
+  h1,h2,h3,h4,h5 {
+      font-family: titleFont;
+  }
+  
+  .navbar{
+    background-color: #374A67;
+    font-size: 22px;
+  }
+  
+  .nav-link , .navbar-brand{
+    color: #EADEDA;
+    font-family: titleFont;
+  }
+  
+  .nav-link:hover , .navbar-brand:hover, .active:hover{
+    color: #EADEDA !important;
+    border-bottom: 2px solid #EADEDA;
+    cursor: pointer;
+  }
+  
+  .navbar-brand{
+    width: 0px;
+    font-size: 32px;
+  }
+  
+  .navbar-nav{
+    margin-left: 10%;
+  }
+  
+  .nav-link{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .active{
+    color: #EADEDA !important;
+    border-bottom: 2px solid #EADEDA;
+  }
+  
+  .logo-img{
+    width: 36px;
+  }
+  
+  .navbar-collapse{
+    justify-content: center;
+  }
+  
+  .d-flex, .search-bar, .search-bar:focus{
+    font-family: titleFont;
+    color: #EADEDA !important;
+    background-color: #374A67;
+  }
+  
+  .d-flex{
+    width: 20%;
+  }
+  
+  .btn-primary{
+    font-family: titleFont;
+    font-size: 32px;
+    color: #EADEDA;
+    background-color: #374A67;
+    border-radius: 15px;
+    border: 2px solid #374A67;
+    width: 35%;
+  }
+  
+  .btn-primary:hover{
+    background-color: #374A67;
+    border: 2px solid #EADEDA;
+    cursor: pointer;
+  }
+  
+  .btn-primary:active{
+    color: #374A67 !important;
+    background-color: #EADEDA !important;
+    border: 2px solid #374A67 !important;  
+  }
+
+
+  .btn-secondary{
+    font-family: titleFont;
+    font-size: 24px;
+    color: #EADEDA;
+    background-color: #374A67;
+    border-radius: 15px;
+    border: 2px solid #374A67;
+    width: 35%;
+  }
+  
+  .btn-secondary:hover{
+    background-color: #374A67;
+    border: 2px solid #EADEDA;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:active{
+    color: #374A67 !important;
+    background-color: #EADEDA !important;
+    border: 2px solid #374A67 !important;  
+  }
+
+  /* character sheet */
+
+  .sheet-panel{
+    background-color: #374A67;
+    border: 2px solid #EADEDA;
+    border-radius: 60px;
+  }
+
