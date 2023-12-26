@@ -121,3 +121,8 @@
     border-radius: 60px;
   }
 
+  .stat-block{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
