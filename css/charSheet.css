@@ -126,3 +126,20 @@
     margin-left: 10%;
     margin-right: 10%;
   }
+
+  .saving-throws{
+    font-family: "bookmania", serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .throws-con{
+    width: 80%;
+  }
+  
+  .save{
+    padding: 15px;
+  }
