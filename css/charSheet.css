@@ -137,9 +137,22 @@
   }
 
   .throws-con{
+    margin-left: 5%;
     width: 80%;
+    display: flex;
+    justify-content: center;
   }
   
   .save{
     padding: 15px;
+  }
+
+  .stat{
+    width: 19%;
+    height: 31%;
+    
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #EADEDA;
   }
