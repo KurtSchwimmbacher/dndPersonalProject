@@ -137,20 +137,23 @@
   }
 
   .throws-con{
-    margin-left: 5%;
-    width: 80%;
-    display: flex;
+    align-content: flex-start;
     justify-content: center;
   }
   
   .save{
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .stat{
-    width: 19%;
-    height: 31%;
-    
+    padding-top: 5%;
+    width: 13%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 27%;
     display: flex;
     justify-content: center;
     border-radius: 50%;
